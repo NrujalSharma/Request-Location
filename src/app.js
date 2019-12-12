@@ -10,7 +10,7 @@ app.use(expressip().getIpInfoMiddleware);
 
 app.set("PORT", PORT);
 
-app.get('/', function (req, res) {
+app.get('/ip', function (req, res) {
   const ipInfo = req.ipInfo;
   console.log(ipInfo);
   var message = `Hey, you are browsing from ${ipInfo.city}, ${ipInfo.country}`;
